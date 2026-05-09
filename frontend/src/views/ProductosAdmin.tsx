@@ -1,9 +1,12 @@
+
+
+
 import Producto from "../components/Producto";
 import useQuiosco from "../hook/useQuiosco";
 import clienteAxios from "../config/axios";
 import useSWR from "swr";  //Actua como un cache para evitar hacer peticiones cada vez que se renderiza el componente, se actualiza cada vez que se hace una petición nueva o cada cierto tiempo. y hace de forma automática, no es necesario hacer nada para que se actualice, solo hay que hacer la petición y el hook se encarga de actualizar el cache y el componente se vuelve a renderizar con los nuevos datos. 
 
-export default function Inicio(){
+export default function ProductoAdmin(){
     
     const {categoriaActual} = useQuiosco();
 
@@ -35,7 +38,7 @@ export default function Inicio(){
                         <Producto 
                             key={product.id}
                             producto={product}
-                            botonAgregar={true}
+                            botonEditar={true}
                         />
                 ))}
             </div>

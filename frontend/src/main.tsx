@@ -5,6 +5,8 @@ import './index.css'
 import route from "./route"
 import { RouterProvider } from 'react-router-dom'
 import { QuioscoProvider } from './context/QuioscoProvider'
+
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QuioscoProvider>
